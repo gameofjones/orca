@@ -1,3 +1,156 @@
 <h1>
   {{title}}
 </h1>
+<html>
+    <title>ORCA</title>
+    <head>
+        <meta name="viewport" content="initial-scale=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <link rel="shortcut icon" type="image/png" href="crown-1.png" />
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <script src="index.js"></script>
+    </head>
+    <body>
+        <div class="top">
+            <div class="orca-logo-word"><a style="color: inherit" href="https://gameofjones.github.io/orca">orca</a></div>
+            <div class="hamburger"></div>
+            <div class="menu-container">
+                <ul class="menu">
+                    <div class="dropdown">
+                        <li class="menu-item"><a href="#">Get a Card</a></li>
+                    </div>
+                    <div class="dropdown">
+                        <li class="menu-item"><a href="#">Have a Card</a></li>
+                        <div class="menu-item-content">
+                            <a class="menu-sub-item" href="#">Registered Cards</a>
+                            <a class="menu-sub-item" href="#">Unregistered Cards</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <li class="menu-item"><a href="#">Customer Service</a></li>
+                        <div class="menu-item-content">
+                            <a class="menu-sub-item" href="#">Pierce Transit</a>
+                            <a class="menu-sub-item" href="#">Washington State Ferries</a>
+                            <a class="menu-sub-item" href="#">Sound Transit</a>
+                            <a class="menu-sub-item" href="#">ORCA Regional Call Center</a>
+                            <a class="menu-sub-item" href="#">Everett Transit</a>
+                            <a class="menu-sub-item" href="#">King County</a>
+                            <a class="menu-sub-item" href="#">Washington State Ferries</a>
+                            <a class="menu-sub-item" href="#">ORCA To-Go</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <li class="menu-item"><a href="#">FAQ</a></li>
+                        <div class="menu-item-content">
+                            <a class="menu-sub-item" href="#">Add Value</a>
+                            <a class="menu-sub-item" href="#">About Your Card</a>
+                            <a class="menu-sub-item" href="#">Lost Card</a>
+                            <a class="menu-sub-item" href="#">Fare</a>
+                            <a class="menu-sub-item" href="#">Glossary</a>
+                        </div>
+                    </div>
+                </ul>
+                <div class="btn-container">
+                    <button class="btn">Register</button>
+                    <button class="btn btn-white">Login</button>
+                </div>
+            </div>
+        </div>
+        <div class="hero">
+            <div class="hero-text-container">
+                <div class="hero-center">
+                    <h1>ORCA gets you moving</h1>
+                        <p style="font-size: 1.125rem;"><span style="color: white">
+                            By bus, train, or ferry - it's the simple way to get there. Getting a card is easy. Then just add value, tap, and ride with ORCA.
+                        </span></p>
+                    <button class="btn btn-medium">Get Started</button>
+                </div>
+            </div>
+        </div>
+        <div style="background-color: teal">
+            <div class="grid">
+                <div class="cell">
+                    <div class="about-svg cash-pass"></div>
+                    <p class="about-text">Works like cash or a pass</p>
+                </div>
+                <div class="cell">
+                    <div class="about-svg add-value"></div>
+                    <p class="about-text">Add value online, at ticket vending machines, or at partipating retailers
+                </div>
+                <div class="cell">
+                    <div class="about-svg track-transfer"></div>
+                    <p class="about-text">Tracks different fares and transfers automatically
+                </div>
+            </div>
+        </div>
+        <div id="how-to" class="how-to-container">
+            <h1 style="text-align: center">One Card Is All You Need</h1>
+            <p class="how-to-subtitle">ORCA is accepted on Community Transit, Everett Transit, King County Metro Transit, Kitsap Transit, Pierce Transit, Sound Transit and Washington State Ferries.</p>
+            <p>
+                <div style="width: 60px; margin: auto">
+                    <a href="#overlay">
+                        <span class="play-button"></span>
+                    </a>
+                </div>
+            </p>
+            <p class="play-button-subtitle">Video: See how it works</p>
+            <div class="taps" style="display: flex; -webkit-flex-wrap: wrap; flex-wrap: wrap;">
+                <div class="cell">
+                    <div class="tap-type-icon bus"></div>
+                    <p class="tap-type-text">Tap at the ORCA card reader when you board.</p>
+                </div>
+                <div class="cell">
+                    <div class="tap-type-icon rapid"></div>
+                    <p class="tap-type-text">Tap at the ORCA card reader before you board.</p>
+                </div>
+                <div class="cell">
+                    <div class="tap-type-icon ferry"></div>
+                    <p class="tap-type-text">Tap at the turnstile. Or, staff can tap your card on their card reader.</p>
+                </div>
+                <div class="cell">
+                    <div class="tap-type-icon street-car"></div>
+                    <p class="tap-type-text">Tap on a station platform reader before you board.</p>
+                </div>
+                <div class="cell">
+                    <div class="tap-type-icon train"></div>
+                    <p class="tap-type-text">Tap at the ORCA card reader on the station platform prior to boarding. </p>
+                </div>
+            </div>
+            <h4 style="text-align: center">Tap and pause. You will see a green light and hear the beep. Tap off when you exit so the correct fare is calculated.</h4>
+        </div>
+        <div style="width: 100%; background-color: #333; color: white; display: inline-block">
+            <div style="padding: 20px">
+                <div class="footer-line" style="display: flex; -webkit-flex-wrap: wrap; flex-wrap: wrap; max-width: 910px; margin: auto;">
+                    <div class="extra-links" style="margin: auto; padding: 0 0 20px 0;">
+                        <a class="footer-link" href="http://www.soundtransit.org/sites/default/files/orca_privacy.pdf" target="_blank">Privacy</a> 
+                        <a class="footer-link" href="http://www.soundtransit.org/sites/default/files/orca_terms.pdf" target="_blank">Terms of Use</a> 
+                        <a class="footer-link" href="https://orcacard.com/ERG-Seattle/p2_002.do?m=42&i=kb.news" target="_blank">News</a> 
+                        <a class="footer-link" href="http://www.orcacard.biz/ERG-Seattle-Institution" target="_blank">Business Accounts</a>
+                    </div>
+                    <div class="languages" style="margin: auto; padding: 0 0 20px 0;">
+                        <a class="footer-link" href="http://www.soundtransit.org/sites/default/files/orca_chinese.pdf" target="_blank">中文 | Chinese </a> 
+                        <a class="footer-link" href="http://www.soundtransit.org/sites/default/files/orca_korean.pdf" target="_blank">한국 | Korean </a> 
+                        <a class="footer-link" href="http://www.soundtransit.org/sites/default/files/orca_russian.pdf" target="_blank">Русский | Russian</a>  
+                        <a class="footer-link" href="http://www.soundtransit.org/sites/default/files/orca_spanish.pdf" target="_blank">Español | Spanish</a>  
+                        <a class="footer-link" href="http://www.soundtransit.org/sites/default/files/orca_tagalog.pdf" target="_blank">Tagalog</a> 
+                        <a class="footer-link" href="http://www.soundtransit.org/sites/default/files/orca_vietnamese.pdf" target="_blank">Tiếng việt | Vietnamese</a>
+                    </div>
+                </div>
+            <p class="footer-line">This site is not for actual use. It is for professional development only. Please go to <a class="footer-link" style="padding: 0" href="https://orcacard.com">orcacard.com</a></p></div>
+            <div style="width: 100%">
+            <img style="float: right; padding: 20px" src="digicert.png"/>
+            </div>
+        </div>
+        <div id="overlay" class="overlay">
+            <div class="popup">
+                <div style="padding: 20px 0;"><a class="close" href="#how-to" onclick="refreshVideo()">&times;</a></div>
+                <div class="content">
+                    <iframe id="tap-video" style="width: 100%; height: 75%;" src="https://www.youtube.com/embed/7gVIXZ0RVEo" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </body>
+<html>
