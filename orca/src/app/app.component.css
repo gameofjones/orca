@@ -31,6 +31,7 @@ p {
 a {
     color: #333;
     text-decoration: none;
+    font-size: 0.9em;
 }
 
 a:hover {
@@ -42,7 +43,7 @@ a:hover {
     background-color: #fff;
     overflow: auto;
     padding-bottom: 6px;
-    max-width: 1400px;
+    max-width: 1200px;
     margin-right: auto;
     margin-left: auto;
 }
@@ -129,7 +130,7 @@ a:hover {
     width: 32px;
     cursor: pointer;
     background-color: teal;
-    -webkit-mask: url(hamburger.svg) no-repeat 50% 50%;
+    -webkit-mask: url(orca/assets/images/hamburger.svg) no-repeat 50% 50%;
     -webkit-mask-size: 90% 90%;
 }
 
@@ -150,6 +151,7 @@ a:hover {
     cursor: pointer;
     display: inline-block;
     text-align: center;
+    font-family: 'Raleway', sans-serif;
 }
 
 .btn:hover {
@@ -179,7 +181,7 @@ a:hover {
     position: relative;
     height: 645px;
     max-height: calc(100vh - 69px);
-    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(transit-4.jpg);
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(orca/assets/images/transit-4.jpg);
     background-repeat: no-repeat;
     background-position: center;
     margin-bottom: 0px;
@@ -235,35 +237,34 @@ a:hover {
     -webkit-box-flex: 1;
     -webkit-flex: 1;
     flex: 1;
-    padding: 0 10px 0 0;
+    padding: 0 20px 0 0;
 }
 
 .about-svg {
     height: 200px;
     width: 200px;
-    background: #f2f2f2;
+    background: #333;
     margin-right: auto;
     margin-left: auto;
 }
 
 .about-text {
     text-align: center;
-    font-weight: bold;
-    font-size: 1.25em;
+    font-size: 1.2em;
 }
 
 .cash-pass {
-    -webkit-mask: url(credit-card.svg) no-repeat 50% 50%;
+    -webkit-mask: url(orca/assets/images/credit-card.svg) no-repeat 50% 50%;
     -webkit-mask-size: 90% 90%;
 }
 
 .track-transfer {
-    -webkit-mask: url(placeholders.svg) no-repeat 50% 50%;
+    -webkit-mask: url(orca/assets/images/placeholders.svg) no-repeat 50% 50%;
     -webkit-mask-size: 90% 90%;
 }
 
 .add-value {
-    -webkit-mask: url(wallet.svg) no-repeat 50% 50%;
+    -webkit-mask: url(orca/assets/images/wallet.svg) no-repeat 50% 50%;
     -webkit-mask-size: 90% 90%;
 }
 
@@ -275,7 +276,7 @@ a:hover {
 }
 
 .how-to-subtitle {
-    max-width: 500px;
+    max-width: 700px;
     text-align: center;
     margin: auto;
 }
@@ -284,7 +285,7 @@ a:hover {
     background: #1b49a0;
     margin-right: auto;
     margin-left: auto;
-    -webkit-mask: url(play-button.svg) no-repeat 50% 50%;
+    -webkit-mask: url(orca/assets/images/play-button.svg) no-repeat 50% 50%;
     -webkit-mask-size: 90% 90%;
     cursor: pointer;
     height: 60px;
@@ -337,27 +338,27 @@ a:hover {
 }
 
 .bus {
-    -webkit-mask: url(bus.svg) no-repeat 50% 50%;
+    -webkit-mask: url(orca/assets/images/bus.svg) no-repeat 50% 50%;
     -webkit-mask-size: 90% 90%;
 }
 
 .rapid {
-    -webkit-mask: url(fast.svg) no-repeat 50% 50%;
+    -webkit-mask: url(orca/assets/images/fast.svg) no-repeat 50% 50%;
     -webkit-mask-size: 90% 90%;
 }
 
 .ferry {
-    -webkit-mask: url(ferry.svg) no-repeat 50% 50%;
+    -webkit-mask: url(orca/assets/images/ferry.svg) no-repeat 50% 50%;
     -webkit-mask-size: 90% 90%;
 }
 
 .street-car {
-    -webkit-mask: url(city-tram.svg) no-repeat 50% 50%;
+    -webkit-mask: url(orca/assets/images/city-tram.svg) no-repeat 50% 50%;
     -webkit-mask-size: 90% 90%;
 }
 
 .train {
-    -webkit-mask: url(train.svg) no-repeat 50% 50%;
+    -webkit-mask: url(orca/assets/images/train.svg) no-repeat 50% 50%;
     -webkit-mask-size: 90% 90%;
 }
 
