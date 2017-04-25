@@ -1,0 +1,147 @@
+a {
+    color: #333;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+a:hover {
+    color: teal;
+}
+
+.top {
+    min-height: 60px;
+    background-color: #fff;
+    overflow: auto;
+    padding-bottom: 6px;
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.orca-logo-word {
+    color: #1b49a0;
+    float: left;
+    font-size: 52px;;
+    font-weight: 700;
+    padding: 0 0 0 12px;
+    cursor: pointer;
+}
+
+.menu-container {
+    float: right;
+    padding: 14px 14px 0 0;
+}
+
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0 10px 0 0;
+    float: left;
+}
+
+.dropdown {
+    overflow: hidden;
+    float: left;
+}
+
+.menu-item {
+    padding: 10px;
+    color: #333;
+    display: block;
+    position: relative;
+}
+
+.menu-item:after {
+	position: absolute;
+    left: 50%;
+	content: '';
+	height: 4px;
+    background: teal;
+    transition: all 0.15s linear;
+    width: 0;
+    bottom: 0;  
+}
+
+.menu-item:hover:after {
+    width: 100%;
+    margin-left: -50% 
+}
+
+.menu-item-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: auto;
+    border-top: 1px solid #f4f4f4;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 5;
+}
+
+.menu-item-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover > .menu-item-content {
+    display: block;
+}
+
+.menu-sub-item {
+    display: block;
+    height: auto;
+    padding: 10px;
+}
+
+.hamburger {
+    display: none;
+    float: right;
+    margin: 4px 10px 0 0;
+    height: 32px;
+    width: 32px;
+    cursor: pointer;
+    background-color: teal;
+    -webkit-mask: url(orca/assets/images/hamburger.svg) no-repeat 50% 50%;
+    -webkit-mask-size: 90% 90%;
+}
+
+.btn-container {
+    float: left;
+    padding: 6px 0 0 10px;
+}
+
+.btn {
+    font-size: .75rem;
+    line-height: 1;
+    height: 1.875rem;
+    width: 6.25rem;
+    color: #fff;
+    background-color: #1b49a0;
+    border: 0;
+    border-radius: 2px;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+}
+
+.btn:hover {
+    background-color: #0d338a;
+}
+
+.btn-white {
+    background-color: white;
+    border: 2px solid black;
+    color: black;
+}
+
+.btn-white:hover {
+    background-color: white;
+    color: teal;
+    border-color: teal;
+}
+
+.btn-medium {
+    font-size: 1rem;
+    height: 2rem;
+    margin-top: 10px;
+    width: 7.25rem;
+}

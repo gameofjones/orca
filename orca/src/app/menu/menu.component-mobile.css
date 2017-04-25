@@ -1,0 +1,49 @@
+@media screen and (max-width: 750px) {
+    .top {
+        overflow: hidden;
+    }
+    
+    .menu {
+        width: 100%;
+    }
+
+    .menu-container {
+        display: none;
+        float: left;
+        width: 100%;
+        padding: 0 14px 0 0;
+    }
+
+    .hamburger {
+        display: block;
+        margin: 18px 10px 0 0;
+    }
+
+    .dropdown {
+        float: none;
+    }
+
+    .menu-item:hover {
+        background-color: gainsboro;
+    }
+
+    .menu-item:after {
+        background-color: gainsboro;
+        transition: initial;
+    }
+
+    .menu-sub-item {
+        color: white;
+        background-color: teal;
+    }
+
+    .menu-item-content {
+        width: 100%;
+        position: relative;
+        border-top: 0px;
+    }
+
+    .dropdown:hover > .menu-item-content {
+        display: none;
+    }
+}

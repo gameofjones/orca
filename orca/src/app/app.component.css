@@ -23,9 +23,14 @@ span, p {
     margin-bottom: 40px;
 }
 
+h1 {
+    font-weight: normal;
+}
+
 p {
     margin-top: 0;
     line-height: 1.2;
+    font-size: 1.2em;
 }
 
 a {
@@ -51,8 +56,7 @@ a:hover {
 .orca-logo-word {
     color: #1b49a0;
     float: left;
-    font-size: 52px;
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 52px;;
     font-weight: 700;
     padding: 0 0 0 12px;
     cursor: pointer;
@@ -177,6 +181,18 @@ a:hover {
     width: 7.25rem;
 }
 
+.grid {
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.cell {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+}
+
 .hero {
     position: relative;
     height: 645px;
@@ -223,7 +239,11 @@ a:hover {
     font-size: 52px;
 }
 
-.grid {
+.about-container {
+    background-color: gainsboro;
+}
+
+.about {
     display: flex;
     -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
@@ -233,10 +253,7 @@ a:hover {
     margin-left: auto;
 }
 
-.cell {
-    -webkit-box-flex: 1;
-    -webkit-flex: 1;
-    flex: 1;
+.about-cell {
     padding: 0 20px 0 0;
 }
 
@@ -250,7 +267,6 @@ a:hover {
 
 .about-text {
     text-align: center;
-    font-size: 1.2em;
 }
 
 .cash-pass {
@@ -279,6 +295,11 @@ a:hover {
     max-width: 700px;
     text-align: center;
     margin: auto;
+}
+
+.play-button-container {
+    width: 60px;
+    margin: 30px auto 20px;
 }
 
 .play-button {
@@ -362,9 +383,31 @@ a:hover {
     -webkit-mask-size: 90% 90%;
 }
 
+.footer {
+    width: 100%;
+    background-color: #333;
+    color: white;
+    display: inline-block;
+    padding: 20px 0 0 0;
+}
+
+.footer-grid {
+    max-width: 940px;
+    margin: auto;
+}
+
 .footer-line {
     font-size: .75em;
     text-align: center;
+}
+
+.footer-cell {
+    margin: auto; padding: 0 0 20px 0;
+}
+
+.languages {
+    margin: auto;
+    padding: 0 0 20px 0;
 }
 
 a.footer-link {
@@ -376,55 +419,9 @@ a.footer-link:hover {
     color: teal;
 }
 
-/*todo: separate out*/
-@media screen and (max-width: 750px) {
-    .top {
-        overflow: hidden;
-    }
-    
-    .menu {
-        width: 100%;
-    }
-
-    .menu-container {
-        display: none;
-        float: left;
-        width: 100%;
-        padding: 0 14px 0 0;
-    }
-
-    .hamburger {
-        display: block;
-        margin: 18px 10px 0 0;
-    }
-
-    .dropdown {
-        float: none;
-    }
-
-    .menu-item:hover {
-        background-color: gainsboro;
-    }
-
-    .menu-item:after {
-        background-color: gainsboro;
-        transition: initial;
-    }
-
-    .menu-sub-item {
-        color: white;
-        background-color: teal;
-    }
-
-    .menu-item-content {
-        width: 100%;
-        position: relative;
-        border-top: 0px;
-    }
-
-    .dropdown:hover > .menu-item-content {
-        display: none;
-    }
+.digi-cert {
+    float: right;
+    padding: 20px;
 }
 
 .overlay {
