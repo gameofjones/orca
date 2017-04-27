@@ -1,0 +1,248 @@
+span, p {
+    font-weight: 400;
+    font-style: normal;
+}
+
+.container-div {
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-weight: normal;
+}
+
+p {
+    margin-top: 0;
+    line-height: 1.2;
+    font-size: 1.2em;
+}
+
+.top {
+    min-height: 60px;
+    background-color: #fff;
+    overflow: auto;
+    padding-bottom: 6px;
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.orca-logo-word {
+    color: #1b49a0;
+    float: left;
+    font-size: 52px;;
+    font-weight: 700;
+    padding: 0 0 0 12px;
+    cursor: pointer;
+}
+
+.hero {
+    position: relative;
+    height: 645px;
+    max-height: calc(100vh - 69px);
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(orca/assets/images/transit-4.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 0px;
+    padding: 0px;
+}
+
+.hero-text-container {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    -moz-transform: translateY(-70%);
+    -ms-transform: translateY(-70%);
+    -webkit-transform: translateY(-70%);
+    transform: translateY(-70%);
+    color: white;
+}
+
+.hero-center {
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+    max-width: 550px;
+}
+
+.hero-text {
+    font-weight: bold;
+    font-style: normal;
+    font-size: 110px;
+    color: white;
+}
+
+.container {
+    padding: 40px 50px 40px 50px;
+}
+
+.container-title {
+    font-size: 52px;
+}
+
+.about-container {
+    background-color: gainsboro;
+}
+
+.about {
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    max-width: 1400px;
+    padding: 30px 20px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.about-cell {
+    padding: 0 20px 0 0;
+}
+
+.about-svg {
+    height: 200px;
+    width: 200px;
+    background: #333;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.about-text {
+    text-align: center;
+}
+
+.cash-pass {
+    -webkit-mask: url(orca/assets/images/credit-card.svg) no-repeat 50% 50%;
+    -webkit-mask-size: 90% 90%;
+}
+
+.track-transfer {
+    -webkit-mask: url(orca/assets/images/placeholders.svg) no-repeat 50% 50%;
+    -webkit-mask-size: 90% 90%;
+}
+
+.add-value {
+    -webkit-mask: url(orca/assets/images/wallet.svg) no-repeat 50% 50%;
+    -webkit-mask-size: 90% 90%;
+}
+
+.how-to-container {
+    max-width: 1200px;
+    padding: 30px 20px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.how-to-subtitle {
+    max-width: 700px;
+    text-align: center;
+    margin: auto;
+}
+
+.play-button-container {
+    width: 60px;
+    margin: 30px auto 20px;
+}
+
+.play-button {
+    background: #1b49a0;
+    margin-right: auto;
+    margin-left: auto;
+    -webkit-mask: url(orca/assets/images/play-button.svg) no-repeat 50% 50%;
+    -webkit-mask-size: 90% 90%;
+    cursor: pointer;
+    height: 60px;
+    width: 60px;
+    display: block;
+}
+
+.play-button:hover {
+    background-color: #0d338a;
+}
+
+.play-button-subtitle {
+    text-align: center;
+    font-size: .9em;
+}
+
+.tap-types {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+}
+
+.tap-video {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+    margin: auto;
+    text-align: center;
+}
+
+.tap-type-container {
+    display: inline-block;
+    padding: 10px 0;
+    width: 100%;
+    min-width: 200px;
+}
+
+.tap-type-text {
+    text-align: center;
+    min-width: 175px;
+    max-width: 240px;
+    margin: auto;
+}
+
+.tap-type-icon {
+    height: 50px;
+    width: 50px;
+    background: #333;
+    margin: 20px auto 0 auto;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 600ms;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup {
+    margin: 70px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    height: 52vw;
+    width: 70vw;
+    position: relative;
+    transition: all 5s ease-in-out;
+}
+
+.popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+.popup .close:hover {
+    color: teal;
+}
+.popup .content {
+    overflow: auto;
+}

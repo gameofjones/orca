@@ -1,0 +1,40 @@
+.footer {
+    width: 100%;
+    background-color: #333;
+    color: white;
+    display: inline-block;
+    padding: 20px 0 0 0;
+}
+
+.footer-grid {
+    max-width: 940px;
+    margin: auto;
+}
+
+.footer-line {
+    font-size: .75em;
+    text-align: center;
+}
+
+.footer-cell {
+    margin: auto; padding: 0 0 20px 0;
+}
+
+.languages {
+    margin: auto;
+    padding: 0 0 20px 0;
+}
+
+a.footer-link {
+    color: white;
+    padding: 0 10px;
+}
+
+a.footer-link:hover {
+    color: teal;
+}
+
+.digi-cert {
+    float: right;
+    padding: 20px;
+}

@@ -1,5 +1,5 @@
 <div class="top">
-    <div class="orca-logo-word"><a style="color: inherit" href="https://gameofjones.github.io/orca">orca</a></div>
+    <div class="orca-logo-word" [routerLink]="['']" >orca</div>
     <div class="hamburger"></div>
     <div class="menu-container">
         <ul class="menu">
@@ -39,7 +39,7 @@
         </ul>
         <div class="btn-container">
             <button class="btn">Register</button>
-            <button class="btn btn-white">Login</button>
+            <button class="btn btn-white" [routerLink]="['login']" routerLinkActive="active">Login</button>
         </div>
     </div>
 </div>

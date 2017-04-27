@@ -1,38 +1,3 @@
-@viewport {
-    zoom: 1.0;
-    width: extend-to-zoom;
-}
-
-@-ms-viewport {
-    width: device-width;
-    zoom: 1.0;
-}
-
-body {
-    margin: 0;
-    color: #333;
-    font-family: 'Source Sans Pro';
-}
-
-span, p {
-    font-weight: 400;
-    font-style: normal;
-}
-
-.container-div {
-    margin-bottom: 40px;
-}
-
-h1 {
-    font-weight: normal;
-}
-
-p {
-    margin-top: 0;
-    line-height: 1.2;
-    font-size: 1.2em;
-}
-
 a {
     color: #333;
     text-decoration: none;
@@ -43,108 +8,19 @@ a:hover {
     color: teal;
 }
 
-.top {
-    min-height: 60px;
-    background-color: #fff;
-    overflow: auto;
-    padding-bottom: 6px;
-    max-width: 1200px;
-    margin-right: auto;
-    margin-left: auto;
+.grid {
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
 }
 
-.orca-logo-word {
-    color: #1b49a0;
-    float: left;
-    font-size: 52px;;
-    font-weight: 700;
-    padding: 0 0 0 12px;
-    cursor: pointer;
-}
-
-.menu-container {
-    float: right;
-    padding: 14px 14px 0 0;
-}
-
-.menu {
-    list-style-type: none;
-    margin: 0;
-    padding: 0 10px 0 0;
-    float: left;
-}
-
-.dropdown {
-    overflow: hidden;
-    float: left;
-}
-
-.menu-item {
-    padding: 10px;
-    color: #333;
-    display: block;
-    position: relative;
-}
-
-.menu-item:after {
-	position: absolute;
-    left: 50%;
-	content: '';
-	height: 4px;
-    background: teal;
-    transition: all 0.15s linear;
-    width: 0;
-    bottom: 0;  
-}
-
-.menu-item:hover:after {
-    width: 100%;
-    margin-left: -50% 
-}
-
-.menu-item-content {
-    display: none;
-    position: absolute;
-    background-color: white;
-    min-width: auto;
-    border-top: 1px solid #f4f4f4;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 5;
-}
-
-.menu-item-content a:hover {
-    background-color: #ddd;
-}
-
-.dropdown:hover > .menu-item-content {
-    display: block;
-}
-
-.menu-sub-item {
-    display: block;
-    height: auto;
-    padding: 10px;
-}
-
-.hamburger {
-    display: none;
-    float: right;
-    margin: 4px 10px 0 0;
-    height: 32px;
-    width: 32px;
-    cursor: pointer;
-    background-color: teal;
-    -webkit-mask: url(orca/assets/images/hamburger.svg) no-repeat 50% 50%;
-    -webkit-mask-size: 90% 90%;
-}
-
-.btn-container {
-    float: left;
-    padding: 6px 0 0 10px;
+.cell {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
 }
 
 .btn {
-    font-size: .75rem;
     line-height: 1;
     height: 1.875rem;
     width: 6.25rem;
@@ -164,7 +40,7 @@ a:hover {
 
 .btn-white {
     background-color: white;
-    border: 2px solid black;
+    border: 1px solid black;
     color: black;
 }
 
@@ -172,300 +48,37 @@ a:hover {
     background-color: white;
     color: teal;
     border-color: teal;
+    border-width: 2px;
 }
 
-.btn-medium {
-    font-size: 1rem;
-    height: 2rem;
-    margin-top: 10px;
-    width: 7.25rem;
-}
-
-.grid {
-    display: flex;
-    -webkit-flex-wrap: wrap;
-    flex-wrap: wrap;
-}
-
-.cell {
-    -webkit-box-flex: 1;
-    -webkit-flex: 1;
-    flex: 1;
-}
-
-.hero {
-    position: relative;
-    height: 645px;
-    max-height: calc(100vh - 69px);
-    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(orca/assets/images/transit-4.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    margin-bottom: 0px;
-    padding: 0px;
-}
-
-.hero-text-container {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    -moz-transform: translateY(-70%);
-    -ms-transform: translateY(-70%);
-    -webkit-transform: translateY(-70%);
-    transform: translateY(-70%);
-    color: white;
-}
-
-.hero-center {
-    width: 90%;
-    margin-right: auto;
-    margin-left: auto;
-    padding-left: 0.625rem;
-    padding-right: 0.625rem;
-    max-width: 550px;
-}
-
-.hero-text {
-    font-weight: bold;
-    font-style: normal;
-    font-size: 110px;
-    color: white;
-}
-
-.container {
-    padding: 40px 50px 40px 50px;
-}
-
-.container-title {
-    font-size: 52px;
-}
-
-.about-container {
-    background-color: gainsboro;
-}
-
-.about {
-    display: flex;
-    -webkit-flex-wrap: wrap;
-    flex-wrap: wrap;
-    max-width: 1400px;
-    padding: 30px 20px;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-.about-cell {
-    padding: 0 20px 0 0;
-}
-
-.about-svg {
-    height: 200px;
-    width: 200px;
-    background: #333;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-.about-text {
-    text-align: center;
-}
-
-.cash-pass {
-    -webkit-mask: url(orca/assets/images/credit-card.svg) no-repeat 50% 50%;
-    -webkit-mask-size: 90% 90%;
-}
-
-.track-transfer {
-    -webkit-mask: url(orca/assets/images/placeholders.svg) no-repeat 50% 50%;
-    -webkit-mask-size: 90% 90%;
-}
-
-.add-value {
-    -webkit-mask: url(orca/assets/images/wallet.svg) no-repeat 50% 50%;
-    -webkit-mask-size: 90% 90%;
-}
-
-.how-to-container {
-    max-width: 1200px;
-    padding: 30px 20px;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-.how-to-subtitle {
-    max-width: 700px;
-    text-align: center;
-    margin: auto;
-}
-
-.play-button-container {
-    width: 60px;
-    margin: 30px auto 20px;
-}
-
-.play-button {
-    background: #1b49a0;
-    margin-right: auto;
-    margin-left: auto;
-    -webkit-mask: url(orca/assets/images/play-button.svg) no-repeat 50% 50%;
-    -webkit-mask-size: 90% 90%;
+.regular-checkbox {
+	-webkit-appearance: none;
+	background-color: #fafafa;
+	border: 1px solid #cacece;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+	padding: 9px;
+	border-radius: 3px;
+	display: inline-block;
+	position: relative;
     cursor: pointer;
-    height: 60px;
-    width: 60px;
-    display: block;
 }
 
-.play-button:hover {
-    background-color: #0d338a;
+.regular-checkbox:active, .regular-checkbox:checked:active {
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
 }
 
-.play-button-subtitle {
-    text-align: center;
-    font-size: .9em;
+.regular-checkbox:checked {
+	background-color: #e9ecee;
+	border: 1px solid #adb8c0;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
+	color: #99a1a7;
 }
 
-.tap-types {
-    -webkit-box-flex: 1;
-    -webkit-flex: 1;
-    flex: 1;
-}
-
-.tap-video {
-    -webkit-box-flex: 1;
-    -webkit-flex: 1;
-    flex: 1;
-    margin: auto;
-    text-align: center;
-}
-
-.tap-type-container {
-    display: inline-block;
-    padding: 10px 0;
-    width: 100%;
-    min-width: 200px;
-}
-
-.tap-type-text {
-    text-align: center;
-    min-width: 175px;
-    max-width: 240px;
-    margin: auto;
-}
-
-.tap-type-icon {
-    height: 50px;
-    width: 50px;
-    background: #333;
-    margin: 20px auto 0 auto;
-}
-
-.bus {
-    -webkit-mask: url(orca/assets/images/bus.svg) no-repeat 50% 50%;
-    -webkit-mask-size: 90% 90%;
-}
-
-.rapid {
-    -webkit-mask: url(orca/assets/images/fast.svg) no-repeat 50% 50%;
-    -webkit-mask-size: 90% 90%;
-}
-
-.ferry {
-    -webkit-mask: url(orca/assets/images/ferry.svg) no-repeat 50% 50%;
-    -webkit-mask-size: 90% 90%;
-}
-
-.street-car {
-    -webkit-mask: url(orca/assets/images/city-tram.svg) no-repeat 50% 50%;
-    -webkit-mask-size: 90% 90%;
-}
-
-.train {
-    -webkit-mask: url(orca/assets/images/train.svg) no-repeat 50% 50%;
-    -webkit-mask-size: 90% 90%;
-}
-
-.footer {
-    width: 100%;
-    background-color: #333;
-    color: white;
-    display: inline-block;
-    padding: 20px 0 0 0;
-}
-
-.footer-grid {
-    max-width: 940px;
-    margin: auto;
-}
-
-.footer-line {
-    font-size: .75em;
-    text-align: center;
-}
-
-.footer-cell {
-    margin: auto; padding: 0 0 20px 0;
-}
-
-.languages {
-    margin: auto;
-    padding: 0 0 20px 0;
-}
-
-a.footer-link {
-    color: white;
-    padding: 0 10px;
-}
-
-a.footer-link:hover {
-    color: teal;
-}
-
-.digi-cert {
-    float: right;
-    padding: 20px;
-}
-
-.overlay {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.7);
-    transition: opacity 600ms;
-    visibility: hidden;
-    opacity: 0;
-}
-
-.overlay:target {
-    visibility: visible;
-    opacity: 1;
-}
-
-.popup {
-    margin: 70px auto;
-    padding: 20px;
-    background: #fff;
-    border-radius: 5px;
-    height: 52vw;
-    width: 70vw;
-    position: relative;
-    transition: all 5s ease-in-out;
-}
-
-.popup .close {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    transition: all 200ms;
-    font-size: 30px;
-    font-weight: bold;
-    text-decoration: none;
-    color: #333;
-}
-
-.popup .close:hover {
-    color: teal;
-}
-.popup .content {
-    overflow: auto;
+.regular-checkbox:checked:after {
+	content: '\2714';
+	font-size: 14px;
+	position: absolute;
+	top: 0px;
+	left: 3px;
+	color: #99a1a7;
 }
