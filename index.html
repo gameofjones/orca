@@ -8,7 +8,17 @@
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
   <link rel="icon" type="image/png" href="crown-1.png">
 <link href="orca/styles.d41d8cd98f00b204e980.bundle.css" rel="stylesheet"/></head>
+<script>
+  // See http://www.backalleycoder.com/2016/05/13/sghpa-the-single-page-app-hack-for-github-pages/
+  (function(){
+    var redirect = sessionStorage.redirect;
+    delete sessionStorage.redirect;
+    if (redirect && redirect != location.href) {
+      history.replaceState(null, null, redirect);
+    }
+  })();
+</script>
 <body style="margin: 0; color: #333; font-family: 'Raleway', sans-serif">
-  <app-root>Loading...</app-root>
-<script type="text/javascript" src="orca/inline.e637b040d56c31538cac.bundle.js"></script><script type="text/javascript" src="orca/polyfills.eedbe37e941d9013d182.bundle.js"></script><script type="text/javascript" src="orca/vendor.ddce7993a9a3b642230b.bundle.js"></script><script type="text/javascript" src="orca/main.378469d4f79b8557da8f.bundle.js"></script></body>
+    <app-root>Loading...</app-root>
+<script type="text/javascript" src="orca/inline.883c641913ad0fe73db1.bundle.js"></script><script type="text/javascript" src="orca/polyfills.eedbe37e941d9013d182.bundle.js"></script><script type="text/javascript" src="orca/vendor.ddce7993a9a3b642230b.bundle.js"></script><script type="text/javascript" src="orca/main.7dc056a0d0151b5fb946.bundle.js"></script></body>
 </html>
