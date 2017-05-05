@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, NavigationStart, NavigationEnd, NavigationError, NavigationCancel, RoutesRecognized } from '@angular/router';
 
 @Component({
   selector: 'app-menu',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  constructor() { }
+  subPage: boolean = false;
+
+    constructor(router:Router) {
+        router.events.forEach((event) => {
+          if(event instanceof NavigationStart) {
+              event.url !== '/' ? this.subPage = true : this.subPage = false;
+          }
+        });
+    }
 
   ngOnInit() {
   }
 
+  clicked(event) {
+      console.log('hello');
+  }
 }

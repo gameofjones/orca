@@ -8,6 +8,16 @@ a:hover {
     color: teal;
 }
 
+h1, h2 {
+    font-weight: normal;
+}
+
+p {
+    margin-top: 0;
+    line-height: 1.2;
+    font-size: 1.2em;
+}
+
 .grid {
     display: flex;
     -webkit-flex-wrap: wrap;
@@ -78,7 +88,14 @@ a:hover {
 	content: '\2714';
 	font-size: 14px;
 	position: absolute;
+    margin: auto;
 	top: 0px;
-	left: 3px;
+	left: 0px;
+    right: 0px;
+    bottom: 0px;
 	color: #99a1a7;
+}
+
+.router-outlet {
+    min-height: calc(100vh - 67px - 168px);
 }

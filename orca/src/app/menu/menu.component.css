@@ -1,6 +1,24 @@
+li {
+    color: #333;
+    font-size: 0.9em;
+}
+
+li:hover {
+    color: teal;
+    cursor: pointer;
+}
+
+li.active {
+    color: #e5a305;
+    font-weight: bold;
+}
+
+.top-container {
+    background-color: #fff;
+}
+
 .top {
     min-height: 60px;
-    background-color: #fff;
     overflow: auto;
     padding-bottom: 6px;
     max-width: 1200px;
@@ -89,11 +107,36 @@
     width: 32px;
     cursor: pointer;
     background-color: teal;
-    -webkit-mask: url(orca/assets/images/hamburger.svg) no-repeat 50% 50%;
+    -webkit-mask: url(assets/images/hamburger.svg) no-repeat 50% 50%;
     -webkit-mask-size: 90% 90%;
 }
 
 .btn-container {
     float: left;
     padding: 6px 0 0 10px;
+}
+
+.sub-page {
+    background: #1b49a0;
+}
+
+.sub-page-logo {
+    color: white;
+}
+
+.sub-page-menu-item {
+    color: white;
+}
+
+.sub-page-register {
+    background: teal;
+}
+
+.sub-page-register:hover {
+    background: #006666;
+}
+
+.sub-page-login {
+    background: white;
+    border: 0;
 }

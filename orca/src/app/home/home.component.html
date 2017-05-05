@@ -1,11 +1,19 @@
 <div class="hero">
     <div class="hero-text-container">
         <div class="hero-center">
-            <h1>{{ heroText }}</h1>
+            <h1 style="text-align: center">{{ heroText }}</h1>
                 <p><span style="color: white">{{ heroSubText }}</span></p>
-            <button class="btn">{{ getStarted }}</button>
+            <div style="text-align: center"><button class="btn">{{ getStarted }}</button></div>
         </div>
     </div>
+</div>
+<div id="how-to" class="how-to-container">
+    <h1 style="text-align: center">{{ orca }}</h1>
+    <p class="how-to-subtitle">{{ howTo }}</p>
+    <div class="play-button-container">
+        <a href="#overlay"><span class="play-button"></span></a>
+    </div>
+    <p class="play-button-subtitle">{{ video }}</p>
 </div>
 <div class="about-container">
     <div class="grid about">
@@ -22,14 +30,6 @@
             <p class="about-text">{{ trackTransfer }}</p>
         </div>
     </div>
-</div>
-<div id="how-to" class="how-to-container">
-    <h1 style="text-align: center">{{ orca }}</h1>
-    <p class="how-to-subtitle">{{ howTo }}</p>
-    <div class="play-button-container">
-        <a href="#overlay"><span class="play-button"></span></a>
-    </div>
-    <p class="play-button-subtitle">{{ video }}</p>
 </div>
 <div id="overlay" class="overlay">
     <div class="popup">

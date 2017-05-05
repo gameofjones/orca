@@ -1,45 +1,55 @@
-<div class="top">
-    <div class="orca-logo-word" [routerLink]="['']" >orca</div>
-    <div class="hamburger"></div>
-    <div class="menu-container">
-        <ul class="menu">
-            <div class="dropdown">
-                <li class="menu-item"><a href="#">Get a Card</a></li>
-            </div>
-            <div class="dropdown">
-                <li class="menu-item"><a href="#">Have a Card</a></li>
-                <div class="menu-item-content">
-                    <a class="menu-sub-item" href="#">Registered Cards</a>
-                    <a class="menu-sub-item" href="#">Unregistered Cards</a>
+<div class="top-container" [ngClass]="{'sub-page': subPage == true}">
+    <div class="top">
+        <div class="orca-logo-word"  [routerLink]="['']" [ngClass]="{'sub-page-logo': subPage == true}">orca</div>
+        
+        <!--<input type="checkbox" name="toggle" id="toggle" />
+        <label for="toggle"></label>
+        <div class="message">
+            <h1> hello, I'm a hidden message. You found it.</h1>
+            <h2>Now Click the Heart button in the bottom to support CSS3</h2>
+        </div>-->
+
+        <div class="hamburger" (click)="clicked()"></div>
+        <div class="menu-container">
+            <ul class="menu">
+                <div class="dropdown">
+                    <li class="menu-item" [routerLink]="['get-a-card']" routerLinkActive="active">Get a Card</li>
                 </div>
-            </div>
-            <div class="dropdown">
-                <li class="menu-item"><a href="#">Customer Service</a></li>
-                <div class="menu-item-content">
-                    <a class="menu-sub-item" href="#">Pierce Transit</a>
-                    <a class="menu-sub-item" href="#">Washington State Ferries</a>
-                    <a class="menu-sub-item" href="#">Sound Transit</a>
-                    <a class="menu-sub-item" href="#">ORCA Regional Call Center</a>
-                    <a class="menu-sub-item" href="#">Everett Transit</a>
-                    <a class="menu-sub-item" href="#">King County</a>
-                    <a class="menu-sub-item" href="#">Washington State Ferries</a>
-                    <a class="menu-sub-item" href="#">ORCA To-Go</a>
+                <div class="dropdown">
+                    <li class="menu-item" [ngClass]="{'sub-page-menu-item': subPage == true}">Have a Card</li>
+                    <div class="menu-item-content">
+                        <a class="menu-sub-item" href="#">Registered Cards</a>
+                        <a class="menu-sub-item" href="#">Unregistered Cards</a>
+                    </div>
                 </div>
-            </div>
-            <div class="dropdown">
-                <li class="menu-item"><a href="#">FAQ</a></li>
-                <div class="menu-item-content">
-                    <a class="menu-sub-item" href="#">Add Value</a>
-                    <a class="menu-sub-item" href="#">About Your Card</a>
-                    <a class="menu-sub-item" href="#">Lost Card</a>
-                    <a class="menu-sub-item" href="#">Fare</a>
-                    <a class="menu-sub-item" href="#">Glossary</a>
+                <div class="dropdown">
+                    <li class="menu-item" [ngClass]="{'sub-page-menu-item': subPage == true}">Customer Service</li>
+                    <div class="menu-item-content">
+                        <a class="menu-sub-item" href="#">Pierce Transit</a>
+                        <a class="menu-sub-item" href="#">Washington State Ferries</a>
+                        <a class="menu-sub-item" href="#">Sound Transit</a>
+                        <a class="menu-sub-item" href="#">ORCA Regional Call Center</a>
+                        <a class="menu-sub-item" href="#">Everett Transit</a>
+                        <a class="menu-sub-item" href="#">King County</a>
+                        <a class="menu-sub-item" href="#">Washington State Ferries</a>
+                        <a class="menu-sub-item" href="#">ORCA To-Go</a>
+                    </div>
                 </div>
+                <div class="dropdown">
+                    <li class="menu-item" [ngClass]="{'sub-page-menu-item': subPage == true}">FAQ</li>
+                    <div class="menu-item-content">
+                        <a class="menu-sub-item" href="#">Add Value</a>
+                        <a class="menu-sub-item" href="#">About Your Card</a>
+                        <a class="menu-sub-item" href="#">Lost Card</a>
+                        <a class="menu-sub-item" href="#">Fare</a>
+                        <a class="menu-sub-item" href="#">Glossary</a>
+                    </div>
+                </div>
+            </ul>
+            <div class="btn-container">
+                <button class="btn" [ngClass]="{'sub-page-register': subPage == true}">Register</button>
+                <button class="btn btn-white" [routerLink]="['login']" [ngClass]="{'sub-page-login': subPage == true}">Login</button>
             </div>
-        </ul>
-        <div class="btn-container">
-            <button class="btn">Register</button>
-            <button class="btn btn-white" [routerLink]="['login']" routerLinkActive="active">Login</button>
         </div>
     </div>
 </div>

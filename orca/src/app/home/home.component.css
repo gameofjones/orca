@@ -7,16 +7,6 @@ span, p {
     margin-bottom: 40px;
 }
 
-h1 {
-    font-weight: normal;
-}
-
-p {
-    margin-top: 0;
-    line-height: 1.2;
-    font-size: 1.2em;
-}
-
 .top {
     min-height: 60px;
     background-color: #fff;
@@ -40,7 +30,7 @@ p {
     position: relative;
     height: 645px;
     max-height: calc(100vh - 69px);
-    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(orca/assets/images/transit-4.jpg);
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(assets/images/transit-4.jpg);
     background-repeat: no-repeat;
     background-position: center;
     margin-bottom: 0px;
@@ -64,7 +54,7 @@ p {
     margin-left: auto;
     padding-left: 0.625rem;
     padding-right: 0.625rem;
-    max-width: 550px;
+    max-width: 700px;
 }
 
 .hero-text {
@@ -113,17 +103,17 @@ p {
 }
 
 .cash-pass {
-    -webkit-mask: url(orca/assets/images/credit-card.svg) no-repeat 50% 50%;
+    -webkit-mask: url(assets/images/credit-card.svg) no-repeat 50% 50%;
     -webkit-mask-size: 90% 90%;
 }
 
 .track-transfer {
-    -webkit-mask: url(orca/assets/images/placeholders.svg) no-repeat 50% 50%;
+    -webkit-mask: url(assets/images/placeholders.svg) no-repeat 50% 50%;
     -webkit-mask-size: 90% 90%;
 }
 
 .add-value {
-    -webkit-mask: url(orca/assets/images/wallet.svg) no-repeat 50% 50%;
+    -webkit-mask: url(assets/images/wallet.svg) no-repeat 50% 50%;
     -webkit-mask-size: 90% 90%;
 }
 
@@ -136,7 +126,6 @@ p {
 
 .how-to-subtitle {
     max-width: 700px;
-    text-align: center;
     margin: auto;
 }
 
@@ -149,7 +138,7 @@ p {
     background: #1b49a0;
     margin-right: auto;
     margin-left: auto;
-    -webkit-mask: url(orca/assets/images/play-button.svg) no-repeat 50% 50%;
+    -webkit-mask: url(assets/images/play-button.svg) no-repeat 50% 50%;
     -webkit-mask-size: 90% 90%;
     cursor: pointer;
     height: 60px;

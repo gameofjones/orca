@@ -15,7 +15,7 @@ export class FooterComponent implements OnInit {
 
     businessAccounts = "Business Accounts";
 
-    notReal = "This site is not for actual use. It is for professional development only. Please go to";
+    notReal = "This site is not for actual use. It is for professional development only. Please go to ";
 
   constructor() { }
 
