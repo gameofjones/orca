@@ -26,7 +26,7 @@ span, p {
     cursor: pointer;
 }
 
-.hero {
+.hero-background {
     position: relative;
     height: 645px;
     max-height: calc(100vh - 69px);
@@ -37,23 +37,20 @@ span, p {
     padding: 0px;
 }
 
-.hero-text-container {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    -moz-transform: translateY(-70%);
-    -ms-transform: translateY(-70%);
-    -webkit-transform: translateY(-70%);
-    transform: translateY(-70%);
+.hero-container {
+    display: flex;
+    height: 70%;
+    padding: 16px;
     color: white;
 }
 
-.hero-center {
-    width: 90%;
-    margin-right: auto;
-    margin-left: auto;
-    padding-left: 0.625rem;
-    padding-right: 0.625rem;
+.c {
+    margin: auto;
+    width: 1200px;
+}
+
+.d {
+    width: 100%;
     max-width: 700px;
 }
 
@@ -80,14 +77,14 @@ span, p {
     display: flex;
     -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
-    max-width: 1400px;
+    max-width: 1200px;
     padding: 30px 20px;
     margin-right: auto;
     margin-left: auto;
 }
 
 .about-cell {
-    padding: 0 20px 0 0;
+    padding: 0 10px;
 }
 
 .about-svg {
@@ -118,14 +115,17 @@ span, p {
 }
 
 .how-to-container {
-    max-width: 1200px;
     padding: 30px 20px;
     margin-right: auto;
     margin-left: auto;
 }
 
+.how-to {
+    max-width: 1200px;
+    margin: auto;
+}
+
 .how-to-subtitle {
-    max-width: 700px;
     margin: auto;
 }
 
