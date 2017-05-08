@@ -28,9 +28,9 @@ span, p {
 
 .hero-background {
     position: relative;
-    height: 645px;
+    height: 1080px;
     max-height: calc(100vh - 69px);
-    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(assets/images/transit-4.jpg);
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(assets/images/registeredcards.jpg);
     background-repeat: no-repeat;
     background-position: center;
     margin-bottom: 0px;
@@ -65,11 +65,11 @@ span, p {
     height: 2.875rem;
     width: 7.25rem;
     font-size: 1em;
-    background: teal;
+    background: #1b49a0;
 }
 
 .hero-btn:hover {
-    background: #006666;
+    background: #0d338a;
 }
 
 .container {

@@ -10,6 +10,7 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
 import { GetACardComponent } from './get-a-card/get-a-card.component';
+import { RegisteredCardsComponent } from './registered-cards/registered-cards.component';
 
 const appRoutes: Routes = [
     { 
@@ -19,6 +20,10 @@ const appRoutes: Routes = [
     {
         path: 'get-a-card',
         component: GetACardComponent
+    },
+    {
+        path: 'registered-cards',
+        component: RegisteredCardsComponent
     },
     {
         path: 'login',
@@ -33,7 +38,8 @@ const appRoutes: Routes = [
     LoginComponent,
     HomeComponent,
     FooterComponent,
-    GetACardComponent
+    GetACardComponent,
+    RegisteredCardsComponent
   ],
   imports: [
     BrowserModule,

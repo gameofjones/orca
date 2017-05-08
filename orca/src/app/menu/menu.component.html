@@ -18,7 +18,7 @@
                 <div class="dropdown">
                     <li class="menu-item" [ngClass]="{'sub-page-menu-item': subPage == true}">Have a Card</li>
                     <div class="menu-item-content">
-                        <a class="menu-sub-item" href="#">Registered Cards</a>
+                        <a class="menu-sub-item" [routerLink]="['registered-cards']">Registered Cards</a>
                         <a class="menu-sub-item" href="#">Unregistered Cards</a>
                     </div>
                 </div>
@@ -47,7 +47,7 @@
                 </div>
             </ul>
             <div class="btn-container">
-                <button class="btn" [ngClass]="{'sub-page-register': subPage == true}">Register</button>
+                <button class="btn" [ngClass]="{'sub-page-register': subPage == true}">Create</button>
                 <button class="btn btn-white" [routerLink]="['login']" [ngClass]="{'sub-page-login': subPage == true}">Login</button>
             </div>
         </div>

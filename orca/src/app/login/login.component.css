@@ -10,8 +10,8 @@
 }
 
 .login-container {
-    background: #152d5c;
-    height: 100vh
+    height: 100vh;
+    background: #e6e6e6;
 }
 
 .login {
@@ -28,9 +28,10 @@
 }
 
 .header {
-    color: white;
+    color: #1b49a0;
     text-align: center;
     font-size: 60px;
+    font-weight: bold;
     cursor: pointer;
 }
 
@@ -49,13 +50,14 @@ input[type=text] {
 }
 
 .login-link {
-    color: white;
     font-size: .9em;
+    font-weight: bold;
     text-decoration: none;
+    color: teal;
 }
 
 .login-link:hover {
-    color: teal;
+    color: #006666;
 }
 
 .login-btn {
@@ -77,14 +79,14 @@ input[type=text] {
 
 .regular-checkbox {
 	background-color: inherit;
-	border: 1px solid white;
+	border: 1px solid #666;
 }
 
 .regular-checkbox:checked {
 	background-color: inherit;
-    color: white;
+    color: #1b49a0;
 }
 
 .regular-checkbox:checked:after {
-	color: white;
+	color: #1b49a0;
 }

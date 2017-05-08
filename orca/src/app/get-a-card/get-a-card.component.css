@@ -1,20 +1,18 @@
 h1 {
     margin-bottom: 0;
-}
-
-h2 {
-    color: teal;
+    padding: 0 20px;
 }
 
 p {
     min-width: 200px;
     padding: 0 20px 0 0;
+    font-size: 1em;
 }
 
 a {
     color: teal;
-    text-decoration: underline;
     font-size: 1em;
+    font-weight: bold;
 }
 
 li {
@@ -25,42 +23,28 @@ a:hover {
     color: #006666;
 }
 
-.first {
-    padding: 0 0 30px;
-}
-
-.middle {
-    border-top: 1px solid gainsboro;
-    border-bottom: 1px solid gainsboro;
+.get-card-container {
+    width: 100%;
+    background: #333;
+    color: white;
     padding: 30px 0px;
 }
 
-.last {
-    padding: 30px 0px;
+.get-card {
+    max-width: 1240px;
+    margin: auto;
 }
 
-.get-card-svg {
-    height: 200px;
-    width: 200px;
-    margin-right: auto;
-    margin-left: auto;
-    background: #555555;
-    padding: 0 20px;
+.cell {
+    
 }
 
-.online {
-    -webkit-mask: url(assets/images/online-store.svg) no-repeat 50% 50%;
-    -webkit-mask-size: 90% 90%;
+.btn {
+    background: teal;
 }
 
-.by-mail {
-    -webkit-mask: url(assets/images/packing.svg) no-repeat 50% 50%;
-    -webkit-mask-size: 90% 90%;
-}
-
-.in-person {
-    -webkit-mask: url(assets/images/shop.svg) no-repeat 50% 50%;
-    -webkit-mask-size: 90% 90%;
+.btn:hover {
+    background: #006666;
 }
 
 @media screen and (max-width: 500px) {

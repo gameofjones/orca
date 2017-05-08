@@ -4,14 +4,14 @@
             <div class="d">
                 <h1>{{ heroText }}</h1>
                     <p><span style="color: white">{{ heroSubText }}</span></p>
-                <button class="btn" style="height: 2.875rem; width: 7.25rem; font-size: 1em">{{ getStarted }}</button>
+                <button class="btn hero-btn" [routerLink]="['get-a-card']" style="">{{ getStarted }}</button>
             </div>
         </div>
     </div>
 </div>
 <div class="how-to-container">
     <div id="how-to" class="how-to">
-        <h1>{{ orca }}</h1>
+        <h1 style="text-align: center">{{ orca }}</h1>
         <p class="how-to-subtitle">{{ howTo }}</p>
         <div class="play-button-container">
             <a href="#overlay"><span class="play-button"></span></a>
