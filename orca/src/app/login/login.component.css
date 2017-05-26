@@ -14,6 +14,11 @@
     background: #e6e6e6;
 }
 
+.forgot-password-container {
+    float: right;
+    margin-top: 10px;
+}
+
 .login {
     height: 500px;
     position: fixed;
@@ -35,7 +40,7 @@
     cursor: pointer;
 }
 
-input[type=text] {
+input[type=text], input[type=password] {
     border-radius: 2px;
     border-style: solid;
     border-width: 1px;
@@ -44,9 +49,11 @@ input[type=text] {
     padding: 10px;
     width: 100%;
     box-sizing: border-box;
-    margin-bottom: 40px;
     background: #f4f4f4;
-    animation-timing-function: line-animation 1s linear forwards;
+}
+
+.username-container {
+    margin-bottom: 40px;
 }
 
 .login-link {
@@ -77,6 +84,18 @@ input[type=text] {
     background: #006666;
 }
 
+.login-btn:disabled, .login-btn[disabled] {
+    pointer-events: none;
+    cursor: not-allowed;
+    opacity: .65;
+}
+
+.login-btn:disabled:hover, .login-btn[disabled]:hover {
+    pointer-events: none;
+    cursor: not-allowed;
+    opacity: .65;
+}
+
 .regular-checkbox {
 	background-color: inherit;
 	border: 1px solid #666;
@@ -89,4 +108,29 @@ input[type=text] {
 
 .regular-checkbox:checked:after {
 	color: #1b49a0;
+}
+
+.remember-me-container {
+    display:inline-block;
+    width: 100%;
+    margin: 20px 0;
+    position: relative;
+}
+
+.remember-me-label-container {
+    float: left;
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    margin: 0 0 0 35px;
+}
+
+.alert-danger {
+    font-size: .9em;
+    margin: 5px 0 0 2px;
+    color: #cc0000;
+}
+
+.input-danger {
+    border-color: #cc0000 !important;
 }

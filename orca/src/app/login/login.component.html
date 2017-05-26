@@ -1,22 +1,54 @@
 <div class="login-container">
     <div class="login">
         <h1 [routerLink]="['']" class="header" title="Go back to homepage">orca</h1>
-        <input class="" type="text" placeholder="Username"/>
-        <input class="" type="text" placeholder="Password" style="margin-bottom: 20px"/>
-        <div style="float: right">
-          <a class="login-link" href="#">Forgot password?</a>
-        </div>
-        <div style="display:inline-block; width: 100%; margin: 20px 0; position: relative">
-            <input id="remember-me" type="checkbox" class="regular-checkbox" style="float: left">
-            <div style="    float: left;
-    position: absolute;
-    top: 45%;
-    transform: translateY(-50%);
-    margin: 0 0 0 35px;"><label class="login-link" for="remember-me" style="cursor: pointer">Remember me</label></div>
-        </div>
-        <button class="login-btn">Log In</button>
-        <div style="margin: 20px 0">
-            <a class="login-link" href="#">No account? Register here</a>
-        </div>
+        <form #heroForm="ngForm">
+            <!-- username -->
+            <div class="username-container">
+                <input id="name"
+                    required
+                    name="name"
+                    class="form-control"
+                    type="text"
+                    placeholder="Username"
+                    #name="ngModel"
+                    [(ngModel)]="user.name"
+                    [ngClass]="{'input-danger': (name.errors && (name.dirty || name.touched)) }" />
+                <!-- username validation errors -->
+                <div *ngIf="name.errors && (name.dirty || name.touched)" class="alert alert-danger">
+                    <div [hidden]="!name.errors.required">
+                        A username is required
+                    </div>
+                </div>
+            </div>
+            <!-- password -->
+            <input id="password"
+                required
+                name="password"
+                class="form-control"
+                type="password"
+                placeholder="Password"
+                #password="ngModel"
+                [(ngModel)]="user.password"
+                [ngClass]="{'input-danger': (password.errors && (password.dirty || password.touched)) }" />
+            <!-- username validation errors -->
+            <div *ngIf="password.errors && (password.dirty || password.touched)" class="alert alert-danger">
+                <div [hidden]="!password.errors.required">
+                    A password is required
+                </div>
+            </div>
+            <div class="forgot-password-container ">
+                <a class="login-link" href="#">Forgot password?</a>
+            </div>
+            <div class="remember-me-container">
+                <input id="remember-me" type="checkbox" class="regular-checkbox" style="float: left">
+                <div class="remember-me-label-container">
+                    <label class="login-link" for="remember-me" style="cursor: pointer">Remember me</label>
+                </div>
+            </div>
+            <button class="login-btn" [disabled]="!heroForm.form.valid">Log In</button>
+            <div style="margin: 20px 0">
+                <a class="login-link" href="#">No account? Register here</a>
+            </div>
+        </form>
     </div>
 </div>
