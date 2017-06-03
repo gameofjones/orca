@@ -1,0 +1,139 @@
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+table {
+    border-collapse:collapse;
+    width: 100%;
+    padding: 20px;
+}
+
+th {
+    text-align: left;
+    background: teal;
+    color: white;
+    padding: 10px;
+}
+
+tr {
+    background: gainsboro;
+}
+
+td {
+    padding: 10px;
+    border: none;
+}
+
+.user-home-container {
+    max-width: 1200px;
+    margin:auto;
+    padding: 20px;
+}
+
+.table-container {
+    padding: 20px 0;
+    /*animate this*/
+    animation: fadein 2s;
+    -moz-animation: fadein 1s; /* Firefox */
+    -webkit-animation: fadein 1s; /* Safari and Chrome */
+    -o-animation: fadein 1s; /* Opera */
+}
+
+.my-cards-container {
+    display: inline-block;
+    width: 100%;
+}
+
+.transaction-container {
+    padding: 0 0 40px 0;
+}
+
+.btn-white {
+    width: auto;
+}
+
+.btn-my-cards {
+    float: left;
+    margin: 0 5px;
+}
+
+.btn-transaction {
+    float: right;
+    margin: 0 5px;
+}
+
+
+@media screen and (max-width: 600px) {
+
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  table tr {
+    display: block;
+    margin-bottom: .625em;
+  }
+  
+  table td {
+    display: block;
+    text-align: right;
+  }
+
+  table td:before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+  }
+  
+  table td:last-child {
+    border-bottom: 0;
+  }
+
+  .table-container {
+      padding: 0;
+  }
+
+  .my-cards-container {
+      margin-bottom: 30px;
+  }
+
+  .select-card {
+      background: white;
+  }
+}

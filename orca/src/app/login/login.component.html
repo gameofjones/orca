@@ -45,7 +45,9 @@
                     <label class="login-link" for="remember-me" style="cursor: pointer">Remember me</label>
                 </div>
             </div>
-            <button class="login-btn" [disabled]="!heroForm.form.valid">Log In</button>
+            <button class="login-btn"
+                [disabled]="!heroForm.form.valid"
+                [routerLink]="['/user-home']">Log In</button>
             <div style="margin: 20px 0">
                 <a class="login-link" href="#">No account? Register here</a>
             </div>

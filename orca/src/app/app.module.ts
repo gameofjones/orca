@@ -11,6 +11,7 @@ import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
 import { GetACardComponent } from './get-a-card/get-a-card.component';
 import { RegisteredCardsComponent } from './registered-cards/registered-cards.component';
+import { UserHomeComponent } from './user-home/user-home.component';
 
 const appRoutes: Routes = [
     { 
@@ -28,6 +29,10 @@ const appRoutes: Routes = [
     {
         path: 'login',
         component: LoginComponent
+    },
+    {
+        path: 'user-home',
+        component: UserHomeComponent
     }
 ];
 
@@ -39,7 +44,8 @@ const appRoutes: Routes = [
     HomeComponent,
     FooterComponent,
     GetACardComponent,
-    RegisteredCardsComponent
+    RegisteredCardsComponent,
+    UserHomeComponent
   ],
   imports: [
     BrowserModule,

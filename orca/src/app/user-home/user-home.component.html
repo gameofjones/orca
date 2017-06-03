@@ -1,0 +1,58 @@
+<div class="user-home-container">
+  <h2>My Cards</h2>
+  <div class="table-container">
+      <table>
+          <thead>
+            <tr>
+              <th style="text-align: center">Select</th>
+              <th>Card Number</th>
+              <th>Name</th>
+              <th>Status</th>
+              <th>Balance</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let card of cards">
+                <td class="select-card" align="center"><input type="radio" name="card" [value]="card.number"></td>
+                <td data-label="Card Number">{{ card.number }}</td>
+                <td data-label="Name">{{ card.name }}</td>
+                <td data-label="Status">
+                    <div *ngIf="card.status">Activated</div>
+                    <div *ngIf="!card.status">Deactivated</div>
+                </td>
+                <td data-label="Balance">${{ card.balance }}</td>
+              </tr>
+          </tbody>
+        </table>
+    </div>
+    <div class="my-cards-container">
+        <div style="float: right">
+          <button class="btn btn-white btn-my-cards">Setup Autoload</button>
+          <button class="btn btn-my-cards">Add Value</button>
+        </div>
+    </div>
+    <h2>Recent Activity</h2>
+    <div class="table-container">
+        <table>
+            <thead>
+              <th>Card Number</th>
+              <th>Date</th>
+              <th>Location</th>
+              <th>Transaction</th>
+              <th>Amount</th>
+            </thead>
+            <tbody>
+              <tr *ngFor="let transaction of transactions">
+                <td data-label="Card Number">{{ transaction.cardNumber }}</td>
+                <td data-label="Date">{{ transaction.date }}</td>
+                <td data-label="Location">{{ transaction.location }}</td>
+                <td data-label="Transaction">{{ transaction.transaction }}</td>
+                <td data-label="Amount">${{ transaction.amount }}</td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+      <div class="transaction-container">
+        <button class="btn btn-transaction">See All</button>
+      </div>
+</div>

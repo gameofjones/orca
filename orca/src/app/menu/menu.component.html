@@ -1,14 +1,6 @@
-<div class="top-container" [ngClass]="{'sub-page': subPage == true}">
+<div class="top-container" >
     <div class="top">
-        <div class="orca-logo-word"  [routerLink]="['']" [ngClass]="{'sub-page-logo': subPage == true}">orca</div>
-        
-        <!--<input type="checkbox" name="toggle" id="toggle" />
-        <label for="toggle"></label>
-        <div class="message">
-            <h1> hello, I'm a hidden message. You found it.</h1>
-            <h2>Now Click the Heart button in the bottom to support CSS3</h2>
-        </div>-->
-
+        <div class="orca-logo-word"  [routerLink]="['']">{{ title }}</div>
         <div class="hamburger" (click)="clicked()"></div>
         <div class="menu-container">
             <ul class="menu">
@@ -16,14 +8,14 @@
                     <li class="menu-item" [routerLink]="['get-a-card']" routerLinkActive="active">Get a Card</li>
                 </div>
                 <div class="dropdown">
-                    <li class="menu-item" [ngClass]="{'sub-page-menu-item': subPage == true}">Have a Card</li>
+                    <li class="menu-item">Have a Card</li>
                     <div class="menu-item-content">
                         <a class="menu-sub-item" [routerLink]="['registered-cards']">Registered Cards</a>
                         <a class="menu-sub-item" href="#">Unregistered Cards</a>
                     </div>
                 </div>
                 <div class="dropdown">
-                    <li class="menu-item" [ngClass]="{'sub-page-menu-item': subPage == true}">Customer Service</li>
+                    <li class="menu-item">Customer Service</li>
                     <div class="menu-item-content">
                         <a class="menu-sub-item" href="#">Pierce Transit</a>
                         <a class="menu-sub-item" href="#">Washington State Ferries</a>
@@ -36,7 +28,7 @@
                     </div>
                 </div>
                 <div class="dropdown">
-                    <li class="menu-item" [ngClass]="{'sub-page-menu-item': subPage == true}">FAQ</li>
+                    <li class="menu-item">FAQ</li>
                     <div class="menu-item-content">
                         <a class="menu-sub-item" href="#">Add Value</a>
                         <a class="menu-sub-item" href="#">About Your Card</a>
