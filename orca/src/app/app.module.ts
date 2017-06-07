@@ -12,6 +12,7 @@ import { FooterComponent } from './footer/footer.component';
 import { GetACardComponent } from './get-a-card/get-a-card.component';
 import { RegisteredCardsComponent } from './registered-cards/registered-cards.component';
 import { UserHomeComponent } from './user-home/user-home.component';
+import { UserMenuComponent } from './user-menu/user-menu.component';
 
 const appRoutes: Routes = [
     { 
@@ -45,7 +46,8 @@ const appRoutes: Routes = [
     FooterComponent,
     GetACardComponent,
     RegisteredCardsComponent,
-    UserHomeComponent
+    UserHomeComponent,
+    UserMenuComponent
   ],
   imports: [
     BrowserModule,

@@ -1,69 +1,108 @@
-import {Observable} from 'rxjs/Rx';
-
-import { Component, OnInit, Input, Output, ChangeDetectorRef, EventEmitter, NgZone } from '@angular/core';
-import { Router, NavigationStart, NavigationEnd, NavigationError, NavigationCancel, RoutesRecognized, ActivatedRoute } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { AppComponent } from '../app.component';
+import { Menu, Item, SubItem } from '../menu-model'
 
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
   styleUrls: ['../app.component.css', './menu.component.css', './menu.component-mobile.css'],
-  //changeDetection: ChangeDetectionStrategy.OnPush
 })
 
 export class MenuComponent implements OnInit {
 
-  public subPage: boolean = false;
-  private sub: any;
+    public menu: Menu;
 
-
-  title: string = 'default';
-
-
-  constructor(private router:Router, private zone:NgZone, private cdRef:ChangeDetectorRef) {
-      
-      /*this.sub = router.events.subscribe(event => {
-          console.log('page change: ' + event.url)
-        
-          this.test.title = "orca";
-          console.log('we ran: ' + this.subPage)
-      });*/
-  }
-
-  getRecentDetections(): void {
-        this.router.events.subscribe((event) => {
-          if(event instanceof NavigationStart) {
-              /*if(event.url = '/user-home') {
-
-                setTimeout(function() {
-                    this.subPage = true;
-                    console.log(this.subPage);
-                }.bind(this), 0);  
-
-              }*/
-
-
-
-              //this.zone.run(() => { // <== added
-                  console.log('page change: ' + event.url)
-        
-                  this.title = "orca";
-                  console.log('we ran: ' + this.title)
-                  setTimeout(()=>{}, 0);
-              //});
-          }
-      });
+    constructor() {
+        this.menu = {
+          items: [
+              {
+                label: 'Get a Card',
+                subItems: null
+              },
+              {
+                label: 'Have a Card',
+                subItems: [
+                    {
+                        label: 'Registered Cards',
+                        link: 'registered-cards'
+                    },
+                    {
+                        label: 'Unregistered Cards',
+                        link: ''
+                    }                                                         
+                ]
+              },
+              {
+                  label: 'Customer Service',
+                  subItems: [
+                      {
+                          label: 'Pierce Transit',
+                          link: ''
+                      },
+                      {
+                          label: 'Washington State Ferries',
+                          link: ''
+                      },
+                      {
+                          label: 'Sound Transit',
+                          link: ''
+                      },
+                      {
+                          label: 'ORCA Regional Call Center',
+                          link: ''
+                      },
+                      {
+                          label: 'Everett Transit',
+                          link: ''
+                      },
+                      {
+                          label: 'King County',
+                          link: ''
+                      },
+                      {
+                          label: 'Washington State Ferries',
+                          link: ''
+                      },
+                      {
+                          label: 'ORCA To-Go',
+                          link: ''
+                      },
+                  ]
+              },
+              {
+                label: 'FAQ',
+                subItems: [
+                    {
+                        label: 'Add Value',
+                        link: ''
+                    },
+                    {
+                        label: 'About Your Card',
+                        link: ''
+                    },
+                    {
+                        label: 'Lost Card',
+                        link: ''
+                    },
+                    {
+                        label: 'Fare',
+                        link: ''
+                    },
+                    {
+                        label: 'Glossary',
+                        link: ''
+                    }                                               
+                ]
+              }
+          ]
+      }
     }
 
-  ngOnInit() {
-      this.getRecentDetections();
+    ngOnInit() {
+ 
+    }
 
-  }
+    clicked(event) {
 
-  ngOnDestroy() {
-      //this.sub.unsubscribe();
-  }
-
-  clicked(event) {
-      console.log('hello');
-  }
+    }
 }

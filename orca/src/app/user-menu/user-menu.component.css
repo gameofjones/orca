@@ -1,0 +1,14 @@
+.top-container {
+    box-shadow: 0 3px 6px 0px gainsboro;
+}
+
+.menu-item {
+    font-size: 2em;
+    font-weight: bold;
+    padding: 0;
+    color: #555555;
+}
+
+.btn-container {
+    display: none;
+}
