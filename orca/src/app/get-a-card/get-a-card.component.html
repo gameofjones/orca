@@ -3,7 +3,7 @@
         <h1>Get a Card</h1>
         <div class="grid" style="margin: 30px 0">
             <div class="cell">
-                <div *ngIf="imageLoaded" [@flyInOut]="imageLoaded" class="card-container">
+                <div *ngIf="imageLoaded" [@flyIn]="imageLoaded" (@flyIn.start)="animateNext(0)" class="card-container">
                     <div style="margin: auto">
                         <img class="card-img" src="assets/images/online.jpg"/>
                     </div>
@@ -16,7 +16,7 @@
                 </div>
             </div>
             <div class="cell">
-                <div *ngIf="imageLoaded" [@flyInOut]="imageLoaded" class="card-container">
+                <div *ngIf="imageDelay[0]" [@flyIn]="imageDelay[0]" (@flyIn.start)="animateNext(1)"  class="card-container">
                     <div style="margin: auto">
                         <img class="card-img" src="assets/images/mail.jpg"/>
                     </div>
@@ -30,7 +30,7 @@
                 </div>
             </div>
             <div class="cell">
-                <div *ngIf="imageLoaded" [@flyInOut]="imageLoaded" class="card-container">
+                <div *ngIf="imageDelay[1]" [@flyIn]="imageDelay[1]" class="card-container">
                     <div style="margin: auto">
                         <img class="card-img" src="assets/images/person.jpg"/>
                     </div> 
@@ -46,7 +46,7 @@
     </div>
     <!-- dummy image loader to trigger animation -->
     <div class="mimic-hidden">
-        <img (load)="onLoad(1)" class="card-img" src="assets/images/person.jpg"/>
+        <img (load)="onImageLoad()" class="card-img" src="assets/images/person.jpg"/>
     </div>
 </div>
 
