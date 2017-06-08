@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router, NavigationStart } from '@angular/router';
+import { Router, Event, NavigationStart } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -13,9 +13,11 @@ export class AppComponent {
     onlyGuts: boolean;
 
     constructor(router: Router) {
-        router.events.forEach((event) => {
-            this.onlyGuts = event.url === '/login';
-            this.userMenu = event.url === '/user-home';            
+        router.events.forEach((event: Event) => {
+            if(event instanceof NavigationStart ){
+                this.onlyGuts = event.url === '/login';
+                this.userMenu = event.url === '/user-home';
+            }         
         });
     }
 }

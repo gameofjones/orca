@@ -3,12 +3,12 @@
         <h1>Get a Card</h1>
         <div class="grid" style="margin: 30px 0">
             <div class="cell">
-                <div style="max-width: 349px; margin: 0 0 30px 0;     padding: 0 20px;">
+                <div *ngIf="imageLoaded" [@flyInOut]="imageLoaded" class="card-container">
                     <div style="margin: auto">
-                        <img style="width: 100%; border: 3px solid gainsboro;" src="assets/images/online.jpg"/>
+                        <img class="card-img" src="assets/images/online.jpg"/>
                     </div>
                     <h2>Online</h2>
-                    <p style="padding: 0px">
+                    <p class="card-description">
                         Order an unregistered adult card online. These are the only ORCA cards that may be ordered online. Other card types
                         require proof of eligibility.
                     </p>
@@ -16,12 +16,12 @@
                 </div>
             </div>
             <div class="cell">
-                <div style="max-width: 349px; margin: 0 0 30px 0;     padding: 0 20px;">
+                <div *ngIf="imageLoaded" [@flyInOut]="imageLoaded" class="card-container">
                     <div style="margin: auto">
-                        <img style="width: 100%; border: 3px solid gainsboro;" src="assets/images/mail.jpg"/>
+                        <img class="card-img" src="assets/images/mail.jpg"/>
                     </div>
                     <h2>By Mail</h2>
-                    <p style="padding: 0px">
+                    <p class="card-description">
                         Order an adult or senior card by mail. Print and complete the form. A 
                         <a href="https://www.soundtransit.org/sites/default/files/orca_card_order_value_form.pdf">proof
                         of age</a> for senior or youth orders will need to be included with the order.
@@ -30,12 +30,12 @@
                 </div>
             </div>
             <div class="cell">
-                <div style="max-width: 349px; margin: 0 0 30px 0;    padding: 0 20px;">
+                <div *ngIf="imageLoaded" [@flyInOut]="imageLoaded" class="card-container">
                     <div style="margin: auto">
-                        <img style="width: 100%; border: 3px solid gainsboro;" src="assets/images/person.jpg"/>
+                        <img class="card-img" src="assets/images/person.jpg"/>
                     </div> 
                     <h2>In Person</h2>                   
-                    <p style="padding: 0px">
+                    <p class="card-description">
                         Buy all card types at your <a href="https://orcacard.com/ERG-Seattle/p2_002.do?m=42&i=kb.agencyContact">local transit agency</a>.
                         Adult cards can be bought at participating retailers.
                     </p>
@@ -43,6 +43,10 @@
                 </div>
             </div>
         </div>
+    </div>
+    <!-- dummy image loader to trigger animation -->
+    <div class="mimic-hidden">
+        <img (load)="onLoad(1)" class="card-img" src="assets/images/person.jpg"/>
     </div>
 </div>
 
