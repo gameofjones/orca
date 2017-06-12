@@ -1,0 +1,17 @@
+@media screen and (max-width: 770px) {
+    .menu-container {
+        padding: 0;
+    }
+
+    .menu {
+        margin: 0;
+    }
+
+    .menu-item {
+        font-size: inherit;
+        color: white;
+        background: #0d338a;
+        font-weight: normal;
+        padding: 10px 20px;
+    }
+}

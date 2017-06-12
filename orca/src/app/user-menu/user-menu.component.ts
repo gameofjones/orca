@@ -5,7 +5,13 @@ import { slideInOut } from '../animations/slideInOut';
 @Component({
     selector: 'app-user-menu',
     templateUrl: '../menu/menu.component.html',
-    styleUrls: ['../app.component.css', '../menu/menu.component.css', '../menu/menu.component-mobile.css', './user-menu.component.css'],
+    styleUrls: [
+        '../app.component.css',
+        '../menu/menu.component.css',
+        '../menu/menu.component-mobile.css',
+        './user-menu.component.css',
+        './user-menu.component-mobile.css'
+        ],
     animations: [ slideInOut ]
 })
 export class UserMenuComponent implements OnInit {
@@ -26,6 +32,8 @@ export class UserMenuComponent implements OnInit {
             items: [
                 {
                     label: 'Hi, Kiah ▾',
+                    isActive: true,
+                    link: null,
                     subItems: [
                         {
                             label: 'Account Details',
@@ -56,7 +64,11 @@ export class UserMenuComponent implements OnInit {
         this.isMobile = (window.innerWidth < 750) ? true : false
     }
 
-    handleBurger(event) {
+    burgerClick(event) {
         this.burger = !this.burger;
+    }
+
+    menuItemClick(item) {
+        // empty
     }
 }

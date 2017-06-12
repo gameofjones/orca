@@ -12,7 +12,7 @@
     .menu-container {
         float: left;
         width: 100%;
-        padding: 0 20px 20px;
+        padding: 0 0 20px;
     }
 
     .hamburger {
@@ -30,34 +30,33 @@
     }
 
     .menu-item {
-        padding: 10px 0;
+        padding: 10px 20px;
     }
 
     .menu-item:hover {
-        background-color: gainsboro;
+        background-color: #0d338a;
+        color: white;
     }
 
     .menu-item:after {
-        background-color: gainsboro;
+        background-color: #0d338a;
         transition: initial;
     }
 
     .menu-sub-item {
         color: white;
-        background-color: teal;
+        background-color: #1b49a0;
+        padding: 10px 20px;
     }
 
     .menu-item-content {
         width: 100%;
         position: relative;
         border-top: 0px;
-    }
-
-    .dropdown:hover > .menu-item-content {
-        display: none;
+        display: block;
     }
 
     .btn-container {
-        padding: 0;
+        padding: 10px 20px 0;
     }
 }

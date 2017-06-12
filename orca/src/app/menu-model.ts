@@ -7,6 +7,8 @@ export class Menu {
 export class Item {
     label: string;
     subItems: Array<SubItem>;
+    isActive: boolean;
+    link: string;
 }
 
 // defines the structure of a submenu

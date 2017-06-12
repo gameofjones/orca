@@ -109,7 +109,7 @@ li.active::after {
     height: 32px;
     width: 32px;
     cursor: pointer;
-    background-color: teal;
+    background-color: #1b49a0;
     -webkit-mask: url(assets/images/hamburger.svg) no-repeat 50% 50%;
     -webkit-mask-size: 90% 90%;
 }

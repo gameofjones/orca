@@ -1,13 +1,16 @@
 <div class="top-container" >
     <div class="top">
         <div class="orca-logo-word"  [routerLink]="['']">orca</div>
-        <div class="hamburger" (click)="handleBurger()"></div>
+        <div class="hamburger" (click)="burgerClick()"></div>
         <div *ngIf="burger || !isMobile" [@slideInOut]="burger && isMobile" class="menu-container">
             <ul class="menu">
                 <div *ngFor="let item of menu.items" class="dropdown">
                     <!-- todo: figure out  routerLinkActive="active" -->
-                    <li class="menu-item" [routerLink]="['get-a-card']">{{ item.label }}</li>
-                    <div class="menu-item-content">
+                    <!-- if it's a top level link with no children -->
+                    <li *ngIf="item.link" class="menu-item" [routerLink]="[item.link]" (click)="menuItemClick(item)">{{ item.label }}</li>
+                    <!-- else it has children with no link -->
+                    <li *ngIf="!item.link" class="menu-item" (click)="menuItemClick(item)">{{ item.label }}</li>
+                    <div class="menu-item-content"  *ngIf="item.isActive" [@slideInOut]="item.isActive && isMobile">
                         <div *ngFor="let subItem of item.subItems">
                             <a class="menu-sub-item" [routerLink]="[subItem.link]">{{ subItem.label }}</a>
                         </div>
