@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, NgZone } from '@angular/core';
 import { Menu, Item, SubItem } from '../menu-model'
 
 @Component({
@@ -8,37 +8,53 @@ import { Menu, Item, SubItem } from '../menu-model'
 })
 export class UserMenuComponent implements OnInit {
 
-  public menu: Menu;
+    public menu: Menu;
+    public burger: boolean = false;
+    public isMobile: boolean = false;
 
-  constructor() {
-      this.menu = {
-          items: [
-              {
-                label: 'Hi, Kiah ▾',
-                subItems: [
-                    {
-                        label: 'Account Details',
-                        link: ''
-                    },
-                    {
-                        label: 'Manage Cards',
-                        link: ''
-                    },
-                    {
-                        label: 'Transaction History',
-                        link: ''
-                    },
-                    {
-                        label: 'Logout',
-                        link: ''
-                    }                                                              
-                ]
-              }
-          ]
-      }
-   }
+    constructor(ngZone: NgZone) {
+        this.checkMobile();
 
-  ngOnInit() {
-  }
+        window.onresize = (e) =>
+        {
+            ngZone.run(() => this.checkMobile());
+        };
+        
+        this.menu = {
+            items: [
+                {
+                    label: 'Hi, Kiah ▾',
+                    subItems: [
+                        {
+                            label: 'Account Details',
+                            link: ''
+                        },
+                        {
+                            label: 'Manage Cards',
+                            link: ''
+                        },
+                        {
+                            label: 'Transaction History',
+                            link: ''
+                        },
+                        {
+                            label: 'Logout',
+                            link: ''
+                        }                                                              
+                    ]
+                }
+            ]
+        }
+    }
 
+    ngOnInit() {
+    }
+
+    checkMobile() {
+        this.isMobile = (window.innerWidth < 750) ? true : false
+    }
+
+    handleBurger(event) {
+        this.burger = !this.burger;
+    }
 }
