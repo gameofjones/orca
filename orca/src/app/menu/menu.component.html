@@ -2,7 +2,7 @@
     <div class="top">
         <div class="orca-logo-word"  [routerLink]="['']">orca</div>
         <div class="hamburger" (click)="handleBurger()"></div>
-        <div *ngIf="burger || !isMobile" [@shrinkInOut]="burger && isMobile" class="menu-container">
+        <div *ngIf="burger || !isMobile" [@slideInOut]="burger && isMobile" class="menu-container">
             <ul class="menu">
                 <div *ngFor="let item of menu.items" class="dropdown">
                     <!-- todo: figure out  routerLinkActive="active" -->

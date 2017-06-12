@@ -1,24 +1,13 @@
-import { Component, OnInit, NgZone, trigger, transition, style, animate, state, keyframes  } from '@angular/core';
+import { Component, OnInit, NgZone } from '@angular/core';
 import { AppComponent } from '../app.component';
 import { Menu, Item, SubItem } from '../menu-model'
+import { slideInOut } from '../animations/slideInOut';
 
 @Component({
     selector: 'app-menu',
     templateUrl: './menu.component.html',
     styleUrls: ['../app.component.css', './menu.component.css', './menu.component-mobile.css'],
-    animations: [
-        trigger('shrinkInOut', [
-            state('in', style({ height: '*' })),
-            transition('void => *', [
-                style({ height: 0 }),
-                animate(250, style({ height: '*' }))
-            ]),
-            transition('* => void', [
-                style({ height: '*' }),
-                animate(250, style({ height: 0 }))
-            ])            
-        ])
-    ]
+    animations: [ slideInOut ]
 })
 
 export class MenuComponent implements OnInit {

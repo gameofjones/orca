@@ -1,10 +1,12 @@
 import { Component, OnInit, NgZone } from '@angular/core';
-import { Menu, Item, SubItem } from '../menu-model'
+import { Menu, Item, SubItem } from '../menu-model';
+import { slideInOut } from '../animations/slideInOut';
 
 @Component({
-  selector: 'app-user-menu',
-  templateUrl: '../menu/menu.component.html',
-  styleUrls: ['../app.component.css', '../menu/menu.component.css', '../menu/menu.component-mobile.css', './user-menu.component.css']
+    selector: 'app-user-menu',
+    templateUrl: '../menu/menu.component.html',
+    styleUrls: ['../app.component.css', '../menu/menu.component.css', '../menu/menu.component-mobile.css', './user-menu.component.css'],
+    animations: [ slideInOut ]
 })
 export class UserMenuComponent implements OnInit {
 
