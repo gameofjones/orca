@@ -1,25 +1,24 @@
 <div class="top-container" >
     <div class="top">
-        <div class="orca-logo-word"  [routerLink]="['']">orca</div>
+        <div class="orca-logo-word"  [routerLink]="['']" (click)="menuItemClick()">orca</div>
         <div class="hamburger" (click)="burgerClick()"></div>
         <div *ngIf="burger || !isMobile" [@slideInOut]="burger && isMobile" class="menu-container">
             <ul class="menu">
                 <div *ngFor="let item of menu.items" class="dropdown">
-                    <!-- todo: figure out  routerLinkActive="active" -->
                     <!-- if it's a top level link with no children -->
-                    <li *ngIf="item.link" class="menu-item" [routerLink]="[item.link]" (click)="menuItemClick(item)">{{ item.label }}</li>
+                    <li *ngIf="item.link" class="menu-item" [routerLink]="[item.link]" (click)="menuItemClick(item)" [ngClass]="{active: item.isActive}">{{ item.label }}</li>
                     <!-- else it has children with no link -->
-                    <li *ngIf="!item.link" class="menu-item" (click)="menuItemClick(item)">{{ item.label }}</li>
-                    <div class="menu-item-content"  *ngIf="item.isActive" [@slideInOut]="item.isActive && isMobile">
+                    <li *ngIf="!item.link" class="menu-item" (click)="menuItemClick(item)" [ngClass]="{active: item.isActive}">{{ item.label }}</li>
+                    <div class="menu-item-content"  *ngIf="item.isExpanded" [@slideInOut]="item.isExpanded && isMobile">
                         <div *ngFor="let subItem of item.subItems">
-                            <a class="menu-sub-item" [routerLink]="[subItem.link]">{{ subItem.label }}</a>
+                            <a class="menu-sub-item" [routerLink]="[subItem.link]" (click)="subItemClick(item)">{{ subItem.label }}</a>
                         </div>
                     </div> 
                 </div>
             </ul>
             <div class="btn-container">
-                <button class="btn" [ngClass]="{'sub-page-register': subPage == true}">Create</button>
-                <button class="btn btn-white" [routerLink]="['login']" [ngClass]="{'sub-page-login': subPage == true}">Login</button>
+                <button class="btn">Create</button>
+                <button class="btn btn-white" [routerLink]="['login']">Login</button>
             </div>
         </div>
     </div>

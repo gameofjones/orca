@@ -9,6 +9,7 @@ export class Item {
     subItems: Array<SubItem>;
     isActive: boolean;
     link: string;
+    isExpanded: boolean;
 }
 
 // defines the structure of a submenu

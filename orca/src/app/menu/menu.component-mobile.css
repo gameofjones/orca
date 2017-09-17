@@ -6,13 +6,13 @@
     
     .menu {
         width: 100%;
-        margin-bottom: 10px;
+        margin-bottom: 1px;
     }
 
     .menu-container {
         float: left;
         width: 100%;
-        padding: 0 0 20px;
+        padding: 0;
     }
 
     .hamburger {
@@ -39,7 +39,7 @@
     }
 
     .menu-item:after {
-        background-color: #0d338a;
+        height: 0;
         transition: initial;
     }
 
@@ -56,7 +56,12 @@
         display: block;
     }
 
+    li.active {
+        color: white;
+        background-color: #0d338a;
+    }
+
     .btn-container {
-        padding: 10px 20px 0;
+        display: none;
     }
 }

@@ -32,8 +32,9 @@ export class UserMenuComponent implements OnInit {
             items: [
                 {
                     label: 'Hi, Kiah ▾',
-                    isActive: true,
+                    isExpanded: true,
                     link: null,
+                    isActive: false,
                     subItems: [
                         {
                             label: 'Account Details',

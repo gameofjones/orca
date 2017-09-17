@@ -103,3 +103,7 @@ p {
 .router-outlet {
     min-height: calc(100vh - 67px - 168px);
 }
+
+.filler {
+    visibility: hidden;
+}
