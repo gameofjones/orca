@@ -198,7 +198,12 @@ span, p {
     margin: 20px auto 0 auto;
 }
 
-.overlay {
+#overlay {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.ease-in {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -206,30 +211,26 @@ span, p {
     right: 0;
     background: rgba(0, 0, 0, 0.7);
     transition: opacity 600ms;
-    visibility: hidden;
-    opacity: 0;
-}
-
-.overlay:target {
-    visibility: visible;
-    opacity: 1;
+    visibility: visible !important;
+    opacity: 1 !important;
 }
 
 .popup {
     margin: 70px auto;
-    padding: 20px;
     background: #fff;
     border-radius: 5px;
-    height: 52vw;
-    width: 70vw;
+    height: 80%;
+    width: 90%;
+    max-height: 440px;
+    max-width: 760px;
     position: relative;
     transition: all 5s ease-in-out;
 }
 
 .popup .close {
     position: absolute;
-    top: 20px;
-    right: 30px;
+    top: 10px;
+    right: 20px;
     transition: all 200ms;
     font-size: 30px;
     font-weight: bold;
@@ -238,8 +239,10 @@ span, p {
 }
 
 .popup .close:hover {
-    color: teal;
+    color: #005cb9;
+    cursor: pointer;
 }
 .popup .content {
-    overflow: auto;
+    padding: 40px;
+    height: 80%;
 }

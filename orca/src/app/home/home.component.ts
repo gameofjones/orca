@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['../app.component.css', './home.component.css']
 })
 export class HomeComponent implements OnInit {
+
+    @ViewChild('tapVideo')tapVideo;
 
     heroText = "ORCA gets you moving";
 
@@ -25,9 +27,24 @@ export class HomeComponent implements OnInit {
 
     video = "Video: See how it works";
 
+    displayVideo = false;
+
   constructor() { }
 
   ngOnInit() {
+
   }
 
+  iclicked() {
+    console.log('i member')
+  }
+
+  openVideo() {
+      this.displayVideo = true;
+  }
+
+  closeVideo() {
+      this.displayVideo = false;
+      this.tapVideo.nativeElement.contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*')
+  }
 }

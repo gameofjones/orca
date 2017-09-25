@@ -14,7 +14,7 @@
         <h1 style="text-align: center">{{ orca }}</h1>
         <p class="how-to-subtitle">{{ howTo }}</p>
         <div class="play-button-container">
-            <a href="#overlay"><span class="play-button"></span></a>
+            <span class="play-button" (click)="openVideo()"></span>
         </div>
         <p class="play-button-subtitle">{{ video }}</p>
     </div>
@@ -35,12 +35,13 @@
         </div>
     </div>
 </div>
-<div id="overlay" class="overlay">
-    <div class="popup">
-        <!--<div style="padding: 20px 0;"><a class="close" href="#how-to" onclick="refreshVideo()">&times;</a></div>-->
-        <div style="padding: 20px 0;"><a class="close" href="#how-to">&times;</a></div>
+<div id="overlay" [ngClass]="{'ease-in': displayVideo }" (click)="iclicked()">
+    <div class="popup" [hidden]="!displayVideo">
+        <div style="">
+            <a class="close" (click)="closeVideo()">&times;</a>
+        </div>
         <div class="content">
-            <iframe id="tap-video" style="width: 100%; height: 75%;" src="https://www.youtube.com/embed/7gVIXZ0RVEo" frameborder="0" allowfullscreen></iframe>
+            <iframe #tapVideo id="tap-video" style="width: 100%; height: 100%" src="https://www.youtube.com/embed/7gVIXZ0RVEo?enablejsapi=1" frameborder="0" allowfullscreen allowscriptaccess="always"></iframe>
         </div>
     </div>
 </div>
