@@ -1,10 +1,11 @@
 .top-container {
-    box-shadow: 0 3px 6px 0px gainsboro;
+    box-shadow: 0 1px 6px 0px gainsboro;
+    border-bottom: 0px;
+    background: #fafafa;
 }
 
 .menu-item {
     font-size: 2em;
-    font-weight: bold;
     padding: 0;
     color: #555555;
 }

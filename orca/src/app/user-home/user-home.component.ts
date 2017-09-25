@@ -44,7 +44,7 @@ export class UserHomeComponent implements OnInit {
   retrieveTransactions(): void {
     let txNumber = 751;
 
-      for(var i=0; i<5; i++) {
+      for(var i=0; i<10; i++) {
           let transaction: Transaction = {
               cardNumber: 11942700,
               date: new Date().toDateString() + ' ' + new Date().toLocaleTimeString(),
